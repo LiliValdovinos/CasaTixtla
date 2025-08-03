@@ -21,8 +21,8 @@ const menuData = {
 
 const restaurantInfo = {
     name: 'Pozolería Casa Tixtla',
-    established: 1985,
-    experience: new Date().getFullYear() - 1985,
+    established: 1976,
+    experience: new Date().getFullYear() - 1976,
     customers: '10k+',
     natural: '100%',
     phone: '55 5440 8042',
