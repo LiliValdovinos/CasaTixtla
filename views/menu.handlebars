@@ -1,0 +1,90 @@
+<section class="py-5 bg-light" style="margin-top: 80px;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-3 fw-bold text-dark">Nuestro Menú Completo</h1>
+            <p class="lead text-muted">Auténticos sabores mexicanos preparados con amor y tradición</p>
+        </div>
+        
+        <!-- Pozoles Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4 text-primary">
+                    <i class="fas fa-bowl-food me-2"></i>POZOLES TRADICIONALES
+                </h2>
+            </div>
+            {{#each menuData.pozoles}}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
+                        <p class="card-text text-muted">{{description}}</p>
+                        <div class="h4 text-warning fw-bold">${{price}}</div>
+                        <button class="btn btn-outline-primary btn-sm" onclick="PozoleriaApp.sendWhatsAppMessage('Hola, me interesa el {{name}} (${{price}})')">
+                            <i class="fab fa-whatsapp me-1"></i>Ordenar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- Antojitos Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4 text-primary">
+                    <i class="fas fa-pepper-hot me-2"></i>ANTOJITOS MEXICANOS
+                </h2>
+            </div>
+            {{#each menuData.antojitos}}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
+                        <p class="card-text text-muted">{{description}}</p>
+                        <div class="h4 text-warning fw-bold">${{price}}</div>
+                        <button class="btn btn-outline-primary btn-sm" onclick="PozoleriaApp.sendWhatsAppMessage('Hola, me interesa {{name}} (${{price}})')">
+                            <i class="fab fa-whatsapp me-1"></i>Ordenar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- Bebidas Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4 text-primary">
+                    <i class="fas fa-glass-water me-2"></i>BEBIDAS TRADICIONALES
+                </h2>
+            </div>
+            {{#each menuData.bebidas}}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
+                        <p class="card-text text-muted">{{description}}</p>
+                        <div class="h4 text-warning fw-bold">${{price}}</div>
+                        <button class="btn btn-outline-primary btn-sm" onclick="PozoleriaApp.sendWhatsAppMessage('Hola, me interesa {{name}} (${{price}})')">
+                            <i class="fab fa-whatsapp me-1"></i>Ordenar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <h3 class="mb-4">¿Listo para ordenar?</h3>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="tel:5574659918" class="btn btn-warning btn-lg">
+                    <i class="fas fa-phone me-2"></i>Llamar Ahora
+                </a>
+                <a href="https://wa.me/+525547573789" class="btn btn-success btn-lg">
+                    <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

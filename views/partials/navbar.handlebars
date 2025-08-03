@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            <i class="fas fa-utensils me-2"></i>
+            POZOLERÍA CASA TIXTLA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{#if isHome}}active{{/if}}" href="/">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{#if isMenu}}active{{/if}}" href="/menu">MENÚ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{#if isAbout}}active{{/if}}" href="/nosotros">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{#if isContact}}active{{/if}}" href="/contacto">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="d-none d-lg-block ms-3">
+            <div class="input-group position-relative">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar..." autocomplete="off">
+                <button class="btn btn-outline-light" type="button" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <!-- Search Results Dropdown -->
+                <div id="searchResults" class="search-dropdown position-absolute w-100 bg-white border rounded shadow-lg d-none" style="top: 100%; z-index: 1000;">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons ms-3 d-none d-lg-block">
+            <a href="https://www.facebook.com/restaurantecasatixtla" class="text-light me-2" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/restaurantecasatixtla/#" class="text-light me-2" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@restaurantecasatixtla" class="text-light me-2" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+</nav>

@@ -1,0 +1,34 @@
+{
+  "name": "casatixtla",
+  "version": "1.0.0",
+  "description": "Página web para CasaTixtla - Pozolería mexicana tradicional",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["pozole", "casatixtla", "restaurante", "mexicano", "nodejs", "handlebars", "bootstrap"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiliValdovinos/CasaTixtla.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiliValdovinos/CasaTixtla/issues"
+  },
+  "homepage": "https://github.com/LiliValdovinos/CasaTixtla#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

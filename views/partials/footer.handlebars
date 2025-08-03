@@ -1,0 +1,43 @@
+<footer class="bg-secondary py-4 mt-auto">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0 text-light">&copy; {{currentYear}} Pozolería Casa Tixtla. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/restaurantecasatixtla" class="text-light me-3" title="Facebook">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/restaurantecasatixtla/#" class="text-light me-3" title="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://wa.me/{{restaurantInfo.whatsapp}}" class="text-light me-3" title="WhatsApp">
+                        <i class="fab fa-whatsapp fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-light" title="Google Reviews">
+                        <i class="fab fa-google fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6 class="text-warning">Ubicación</h6>
+                        <p class="text-light small mb-0">{{restaurantInfo.address}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning">Teléfono</h6>
+                        <p class="text-light small mb-0">{{restaurantInfo.phone}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="text-warning">Horarios</h6>
+                        <p class="text-light small mb-0">{{restaurantInfo.hours}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
