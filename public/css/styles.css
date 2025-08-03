@@ -4,7 +4,7 @@
     --secondary-color: #ffc107;
     --dark-color: #212529;
     --light-color: #f8f9fa;
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family: 'Century Gothic';
 }
 
 /* Reset y configuración base */
@@ -37,6 +37,7 @@ html {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
+    font-family:'Cinzel decorative';
 }
 
 .navbar-nav .nav-link {
