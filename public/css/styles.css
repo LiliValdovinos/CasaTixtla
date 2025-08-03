@@ -40,6 +40,8 @@ html {
     font-family:'Cinzel decorative';
 }
 
+
+
 .navbar-nav .nav-link {
     font-weight: 500;
     margin: 0 0.5rem;
@@ -68,6 +70,17 @@ html {
     width: 100%;
     left: 0;
 }
+
+/* Navbar scroll effecto colores */
+
+.navbar-scrolled .navbar-brand {
+    color: var(--light-color); 
+}
+
+.navbar-scrolled .navbar-nav .nav-link {
+    color: var(--light-color); 
+}
+
 
 /* Search functionality */
 .search-dropdown {
@@ -212,6 +225,15 @@ html {
     transform: translateY(-3px);
 }
 
+/*Scroll colores Social Icons*/
+
+.navbar-scrolled .social-icons a {
+    color: var(--light-color) !important;
+}
+
+.navbar-scrolled .social-icons a:hover {
+    color: var(--dark-color) !important;
+}
 /* Animaciones */
 @keyframes fadeInUp {
     from {
