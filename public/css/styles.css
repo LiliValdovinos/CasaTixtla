@@ -118,7 +118,7 @@ html {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(53, 53, 53, 0.6), rgba(59, 59, 59, 0.6)),
-                url('../images/gallery/front_image.jpg') center/cover;
+                url('../images/gallery/wall_image.jpg') center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
