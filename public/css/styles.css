@@ -2,6 +2,8 @@
 :root {
     --primary-color: #dc3545;
     --secondary-color: #ffc107;
+    --mexican_pink-color: #E4007C;
+    --turquoise-color: #00858a;
     --dark-color: #212529;
     --light-color: #f8f9fa;
     --font-family: 'Century Gothic';
@@ -71,7 +73,11 @@ html {
     left: 0;
 }
 
-/* Navbar scroll effecto colores */
+/* Navbar scroll color effect */
+
+.navbar.navbar-scrolled {
+    background-color: var(--turquoise-color) !important;
+}
 
 .navbar-scrolled .navbar-brand {
     color: var(--light-color); 
@@ -79,6 +85,16 @@ html {
 
 .navbar-scrolled .navbar-nav .nav-link {
     color: var(--light-color); 
+}
+
+.navbar-scrolled .nav-link:hover,
+.navbar-scrolled .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+
+.navbar-scrolled .nav-link::after{
+    background-color: var(--secondary-color);
 }
 
 
