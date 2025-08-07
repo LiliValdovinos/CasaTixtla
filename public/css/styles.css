@@ -2,7 +2,7 @@
 :root {
     --primary-color: #dc3545;
     --secondary-color: #ffc107;
-    --mexican_pink-color: #E4007C;
+    --mexican_pink-color: #a00359;
     --turquoise-color: #00858a;
     --dark-color: #212529;
     --light-color: #f8f9fa;
@@ -76,7 +76,7 @@ html {
 /* Navbar scroll color effect */
 
 .navbar.navbar-scrolled {
-    background-color: var(--turquoise-color) !important;
+    background-color: var(--mexican_pink-color) !important;
 }
 
 .navbar-scrolled .navbar-brand {
@@ -134,7 +134,7 @@ html {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(53, 53, 53, 0.6), rgba(59, 59, 59, 0.6)),
-                url('../images/gallery/wall_image.jpg') center/cover;
+                url('../images/gallery/pozole_image.jpeg') center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
