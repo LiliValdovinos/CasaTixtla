@@ -3,7 +3,7 @@
     --primary-color: #dc3545;
     --secondary-color: #ffc107;
     --mexican_pink-color: #a00359;
-    --turquoise-color: #00858a;
+    --turquoise-color: #01a0a5;
     --dark-color: #212529;
     --light-color: #f8f9fa;
     --font-family: 'Century Gothic';
@@ -244,10 +244,16 @@ html {
     background-image: url('../images/gallery/2nd_photo.jpg');
 }
 
+/*Menu preview*/
+
+#menu-preview {
+    background: var(--secondary-color) !important;
+}
+
 
 /* Menu Cards */
 .menu-card {
-    background: white;
+    background: var(--turquoise-color);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
