@@ -133,13 +133,13 @@ html {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(53, 53, 53, 0.6), rgba(59, 59, 59, 0.6)),
-                url('../images/gallery/pozole_image.jpeg') center/cover;
+    background: linear-gradient(rgba(53, 53, 53, 0.6), rgba(59, 59, 59, 0.6));
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
 }
+
 
 .hero-overlay {
     background: rgba(0,0,0,0.4);
@@ -147,6 +147,10 @@ html {
     height: 100%;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -173,6 +177,73 @@ html {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+/*Image slider*/
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: slide 20s infinite;
+}
+
+.slider .slide{
+    flex: 1 0 100%; 
+    width: 100vw;
+    scroll-snap-align: start; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50% ; 
+    transform: translateX(-50%) ;
+    z-index:3;
+}
+
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms; 
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* Each slide*/
+#slide-1 {
+    background-image: url('../images/gallery/pozole_image.jpeg');
+}
+
+#slide-2 {
+    background-image: url('../images/gallery/wall_image.jpg');
+}
+
+#slide-3 {
+    background-image: url('../images/gallery/front_image.jpg');
+}
+
+#slide-4 {
+    background-image: url('../images/gallery/2nd_photo.jpg');
+}
+
 
 /* Menu Cards */
 .menu-card {
@@ -250,7 +321,7 @@ html {
 .navbar-scrolled .social-icons a:hover {
     color: var(--dark-color) !important;
 }
-/* Animaciones */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -260,6 +331,22 @@ html {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+
+    100% { transform: translateX(0); }
 }
 
 /* Secciones */
