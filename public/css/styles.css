@@ -386,6 +386,9 @@ section {
     left: 0;
     transform: none;
 }
+.text-warning{
+    font-family:'Cinzel decorative';
+}
 
 /* Botones personalizados */
 .btn-warning {
