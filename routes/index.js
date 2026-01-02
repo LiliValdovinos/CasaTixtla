@@ -4,18 +4,18 @@ const router = express.Router();
 // Datos estáticos para el menú example
 const menuData = {
     pozoles: [
-        { name: 'Pozole Verde', price: 125, description: 'Con salsa verde de tomate y cilantro fresco' },
-        { name: 'Pozole Blanco', price: 115, description: 'Clásico pozole sin chile, perfecto para toda la familia' }
+        { name: 'Pozole Verde', price: 130},
+        { name: 'Pozole Blanco', price: 125}
     ],
     antojitos: [
-        { name: 'Tostadas de Tinga', price: 45, description: 'Crujientes tostadas con tinga de pollo desmenuzado' },
-        { name: 'Quesadillas', price: 35, description: 'Quesadillas de queso oaxaca con tortilla artesanal' },
-        { name: 'Flautas', price: 50, description: 'Flautas doradas rellenas de pollo, servidas con crema' }
+        { name: 'Chalupitas', price: 85},
+        { name: 'Tostadas', price: 120},
+        { name: 'Chiles Capones', price: 80}
     ],
     bebidas: [
-        { name: 'Agua de Horchata', price: 25, description: 'Refrescante bebida de arroz con canela' },
-        { name: 'Agua de Jamaica', price: 20, description: 'Agua fresca de flor de jamaica natural' },
-        { name: 'Refrescos', price: 18, description: 'Coca-Cola, Sprite, Fanta y más opciones' }
+        { name: 'Chilate', price: 80},
+        { name: 'Agua Fresca', price: 40},
+        { name: 'Refrescos', price: 45}
     ]
 };
 
@@ -46,6 +46,7 @@ router.get('/menu', (req, res) => {
     res.render('menu', {
         title: 'Menú - Pozolería Casa Tixtla',
         menuData,
+        restaurantInfo,
         isMenu: true
     });
 });

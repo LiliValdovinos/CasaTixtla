@@ -1,42 +1,46 @@
-<footer class="bg-secondary py-4 mt-auto">
+<footer class="bg-secondary py-3 mt-auto">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <p class="mb-0 text-light">&copy; {{currentYear}} Pozolería Casa Tixtla. Todos los derechos reservados.</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/restaurantecasatixtla" class="text-light me-3" title="Facebook">
-                        <i class="fab fa-facebook fa-lg"></i>
-                    </a>
-                    <a href="https://www.instagram.com/restaurantecasatixtla/#" class="text-light me-3" title="Instagram">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                    <a href="https://wa.me/{{restaurantInfo.whatsapp}}" class="text-light me-3" title="WhatsApp">
-                        <i class="fab fa-whatsapp fa-lg"></i>
-                    </a>
-                    <a href="#" class="text-light" title="Google Reviews">
-                        <i class="fab fa-google fa-lg"></i>
-                    </a>
+        <!-- Información del restaurante -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-2">
+                        <h6 class="text-warning mb-2 small">UBICACIÓN</h6>
+                        <p class="text-light small mb-0" style="font-size: 0.85rem;">{{restaurantInfo.address}}</p>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <h6 class="text-warning mb-2 small">TELÉFONO</h6>
+                        <p class="text-light small mb-0" style="font-size: 0.85rem;">{{restaurantInfo.phone}}</p>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <h6 class="text-warning mb-2 small">HORARIOS</h6>
+                        <p class="text-light small mb-0" style="font-size: 0.85rem;">{{restaurantInfo.hours}}</p>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <h6 class="text-warning mb-2 small">REDES SOCIALES</h6>
+                        <div class="social-icons d-flex justify-content-center gap-2">
+                            <a href="https://www.facebook.com/restaurantecasatixtla" class="text-light" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/restaurantecasatixtla/#" class="text-light" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/{{restaurantInfo.whatsapp}}" class="text-light" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="text-light" title="Google Reviews">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
+
+        <!-- Copyright hasta abajo -->
+        <div class="row border-top border-secondary pt-2">
             <div class="col-12 text-center">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h6 class="text-warning">Ubicación</h6>
-                        <p class="text-light small mb-0">{{restaurantInfo.address}}</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h6 class="text-warning">Teléfono</h6>
-                        <p class="text-light small mb-0">{{restaurantInfo.phone}}</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h6 class="text-warning">Horarios</h6>
-                        <p class="text-light small mb-0">{{restaurantInfo.hours}}</p>
-                    </div>
-                </div>
+                <p class="mb-0 text-light" style="font-size: 0.85rem;">&copy; {{currentYear}} Pozolería Casa Tixtla. Todos los derechos reservados.</p>
             </div>
         </div>
     </div>

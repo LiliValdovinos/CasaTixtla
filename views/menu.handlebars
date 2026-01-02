@@ -1,83 +1,604 @@
-<!-- Our menu --> 
-
-<section class="py-5 bg-light" style="margin-top: 80px;">
-    <div class="container">
+<!-- Menú Interactivo -->
+<section class="py-5" style="margin-top: 80px;">
+    <div class="container-fluid px-4">
         <div class="text-center mb-5">
-            <h1 class="display-3 fw-bold text-dark">Nuestro Menú Completo</h1>
-            <p class="lead text-muted">Auténticos sabores mexicanos preparados con amor y tradición</p>
+            <h1 class="display-3 fw-bold" style="color: var(--mexican_pink-color);">Nuestro Menú</h1>
+            <p class="lead text-muted">Selecciona una categoría para ver los platillos</p>
         </div>
         
-        <!-- Pozoles Section -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 text-primary">
-                    <i class="fas fa-bowl-food me-2"></i>POZOLES TRADICIONALES
-                </h2>
-            </div>
-            {{#each menuData.pozoles}}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
-                        <p class="card-text text-muted">{{description}}</p>
-                        <div class="h4 text-warning fw-bold">${{price}}</div>
-                    </div>
+        <!-- Grid de Categorías -->
+        <div class="menu-grid">
+            <!-- Pozoles -->
+            <div class="menu-category-card" data-category="pozoles" style="--category-color: var(--turquoise-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/pozole_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">POZOLES</h3>
                 </div>
             </div>
-            {{/each}}
-        </div>
 
-        <!-- Antojitos Section -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 text-primary">
-                    <i class="fas fa-pepper-hot me-2"></i>ANTOJITOS MEXICANOS
-                </h2>
-            </div>
-            {{#each menuData.antojitos}}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
-                        <p class="card-text text-muted">{{description}}</p>
-                        <div class="h4 text-warning fw-bold">${{price}}</div>
-                    </div>
+            <!-- Complementos -->
+            <div class="menu-category-card" data-category="complementos" style="--category-color: var(--green-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/complementos_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">COMPLEMENTOS</h3>
                 </div>
             </div>
-            {{/each}}
-        </div>
 
-        <!-- Bebidas Section -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="text-center mb-4 text-primary">
-                    <i class="fas fa-glass-water me-2"></i>BEBIDAS TRADICIONALES
-                </h2>
-            </div>
-            {{#each menuData.bebidas}}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold text-primary">{{name}}</h5>
-                        <p class="card-text text-muted">{{description}}</p>
-                        <div class="h4 text-warning fw-bold">${{price}}</div>
-                    </div>
+            <!-- Entradas -->
+            <div class="menu-category-card" data-category="entradas" style="--category-color: var(--purple-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/entradas_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">ENTRADAS</h3>
                 </div>
             </div>
-            {{/each}}
-        </div>
 
-        <!-- Call to Action -->
-        <div class="text-center">
-            <h3 class="mb-4">¿Listo para visitarnos?</h3>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="tel:5574659918" class="btn btn-warning btn-lg">
-                    <i class="fas fa-phone me-2"></i>Llamar Ahora
-                </a>
-                <a href="https://wa.me/+525547573789" class="btn btn-success btn-lg">
-                    <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                </a>
+            <!-- Parrilla -->
+            <div class="menu-category-card" data-category="parrilla" style="--category-color: var(--mexican_pink-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/parrilla_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">NUESTRA PARRILLA</h3>
+                </div>
+            </div>
+
+            <!-- Tacos -->
+            <div class="menu-category-card" data-category="tacos" style="--category-color: var(--turquoise-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/tacos_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">TACOS</h3>
+                </div>
+            </div>
+
+            <!-- Infantil -->
+            <div class="menu-category-card" data-category="infantil" style="--category-color: var(--green-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/infantil_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">PAQUETE INFANTIL</h3>
+                </div>
+            </div>
+
+            <!-- Postres -->
+            <div class="menu-category-card" data-category="postres" style="--category-color: var(--purple-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/postres_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">POSTRES</h3>
+                </div>
+            </div>
+
+            <!-- Café -->
+            <div class="menu-category-card" data-category="cafe" style="--category-color: #6d4c41;">
+                <div class="category-image" style="background-image: url('/images/gallery/cafe_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">CAFÉ</h3>
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="menu-category-card" data-category="bebidas" style="--category-color: var(--turquoise-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/bebidas_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">BEBIDAS</h3>
+                </div>
+            </div>
+
+            <!-- Cervezas -->
+            <div class="menu-category-card" data-category="cervezas" style="--category-color: #ff9800;">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">CERVEZAS</h3>
+                </div>
+            </div>
+
+            <!-- Mezcal -->
+            <div class="menu-category-card" data-category="mezcal" style="--category-color: var(--mexican_pink-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/mezcal_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">MEZCAL</h3>
+                </div>
+            </div>
+
+            <!-- Para llevar -->
+            <div class="menu-category-card" data-category="llevar" style="--category-color: var(--green-color);">
+                <div class="category-image" style="background-image: url('/images/gallery/llevar_photo.jpg');"></div>
+                <div class="category-overlay">
+                    <h3 class="category-title">¿PARA LLEVAR?</h3>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal para mostrar el contenido -->
+<div class="modal fade" id="menuModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header border-0" id="modalHeader">
+                <h2 class="modal-title fw-bold" id="modalTitle"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- El contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Grid de categorías */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.menu-category-card {
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-category-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.menu-category-card:hover .category-image {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.menu-category-card:hover .category-overlay {
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.1), 
+        var(--category-color));
+}
+
+.category-title {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    padding: 0 1rem;
+    letter-spacing: 2px;
+}
+
+.menu-category-card:hover .category-title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Modal personalizado */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--mexican_pink-color), var(--purple-color));
+}
+
+.modal-title {
+    color: white;
+    font-size: 2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    max-height: 70vh;
+}
+
+.btn-close {
+    background-color: white;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* Estilos para el contenido del modal */
+.menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu-item-row:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.menu-item-name {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+
+.menu-item-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.size-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border-radius: 25px;
+    font-weight: 600;
+    background: #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.size-badge:hover {
+    transform: scale(1.05);
+}
+
+.menu-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+}
+
+.alert-info-custom {
+    background-color: rgba(1, 160, 165, 0.1);
+    border-left: 4px solid var(--turquoise-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .menu-category-card {
+        height: 250px;
+    }
+    
+    .category-title {
+        font-size: 1.4rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .menu-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu-item-price {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+</style>
+
+<script type="text/javascript">
+// Datos del menú
+const menuData = {
+    pozoles: {
+        title: 'POZOLES',
+        color: 'var(--turquoise-color)',
+        items: [
+            {
+                name: 'POZOLE BLANCO',
+                sizes: [
+                    { size: 'Chico', price: 115 },
+                    { size: 'Mediano', price: 120 },
+                    { size: 'Grande', price: 125 }
+                ]
+            },
+            {
+                name: 'POZOLE VERDE',
+                sizes: [
+                    { size: 'Chico', price: 120 },
+                    { size: 'Mediano', price: 125 },
+                    { size: 'Grande', price: 130 }
+                ]
+            }
+        ]
+    },
+    complementos: {
+        title: 'COMPLEMENTOS',
+        color: 'var(--green-color)',
+        items: [
+            { name: 'Aguacate', price: 45 },
+            { name: 'Chicharrón', price: 37 },
+            { name: 'Crema', price: 37 },
+            { name: 'Queso', price: 37 },
+            { name: 'Sardina', price: 45 },
+            { name: 'Carne Extra', price: 75 },
+            { name: 'Ord. de Lengua', price: 80 },
+            { name: 'Ord. Guacamole', price: 65 }
+        ]
+    },
+    entradas: {
+        title: 'ENTRADAS',
+        color: 'var(--purple-color)',
+        items: [
+            { name: 'Chalupitas (3pzs) de Guerrero', price: 85 },
+            { name: 'Tostadas (3pzs) de Tinga, Pata o Pollo', price: 120 },
+            { name: 'Chiles (3pzs) Capones', price: 80 },
+            { name: 'Chiles (3pzs) Capones c/Chorizo', price: 110 },
+            { name: 'Chiles (3pzs) Capones Mixtos', price: 100 },
+            { name: 'Tacos (3pzs) Dorados de Requesón', price: 85 },
+            { name: 'Tacos (3pzs) Dorados de Pollo', price: 85 },
+            { name: 'Tacos (3pzs) Dorados de Chorizo', price: 90 },
+            { name: 'Caldo Tlalpeño', price: 90 },
+            { name: 'Consomé de Pollo', price: 85 },
+            { name: 'Manitas a la Vinagreta', price: 130 }
+        ]
+    },
+    parrilla: {
+        title: 'NUESTRA PARRILLA',
+        color: 'var(--mexican_pink-color)',
+        items: [
+            { name: 'Pechuga Asada', price: 140 },
+            { name: 'Pechuga Gratinada', price: 155 },
+            { name: 'Pechuga Empanizada', price: 155 },
+            { name: 'Costilla', price: 150 },
+            { name: 'Alambre de Bistec', price: 160 },
+            { name: 'Alambre de Pollo', price: 180 },
+            { name: 'Queso Fundido', price: 120 },
+            { name: 'Choriqueso', price: 140 },
+            { name: 'Sopes', price: 65 },
+            { name: 'Sopes c/Chorizo', price: 75 },
+            { name: 'Sopes c/Pollo', price: 75 }
+        ]
+    },
+    tacos: {
+        title: 'TACOS',
+        color: 'var(--turquoise-color)',
+        hasDouble: true,
+        items: [
+            { name: 'Chorizo', priceUnit: 55, priceOrder: 135 },
+            { name: 'Chorizo c/Queso', priceUnit: 65, priceOrder: 165 },
+            { name: 'Bistec', priceUnit: 45, priceOrder: 115 },
+            { name: 'Bistec c/Queso', priceUnit: 55, priceOrder: 145 },
+            { name: 'Pollo', priceUnit: 45, priceOrder: 115 },
+            { name: 'Pollo c/Queso', priceUnit: 55, priceOrder: 145 },
+            { name: 'Costilla', priceUnit: 50, priceOrder: 130 },
+            { name: 'Campechanos', priceUnit: 50, priceOrder: 130 },
+            { name: 'Campechanos c/Queso', priceUnit: 60, priceOrder: 160 }
+        ]
+    },
+    infantil: {
+        title: 'PAQUETE INFANTIL',
+        color: 'var(--green-color)',
+        items: [
+            { name: 'Pozole Infantil', price: 100 },
+            { name: 'Nuggets de Pollo (5)', price: 100 },
+            { name: 'Consomé de Pollo', price: 100 },
+            { name: 'Quesadillas de Harina (3)', price: 100 },
+            { name: 'Sopes c/Crema y Queso (3)', price: 100 }
+        ]
+    },
+    postres: {
+        title: 'POSTRES',
+        color: 'var(--purple-color)',
+        items: [
+            { name: 'Jericalla', price: 65 },
+            { name: 'Pan de Elote', price: 95 },
+            { name: 'Pastel Individual', price: 65 },
+            { name: 'Pay de Limón', price: 80 }
+        ],
+        special: [
+            { name: 'Fresas c/Crema', price: 80, note: 'De Jueves a Domingo' },
+            { name: 'Duraznos c/Crema', price: 80, note: 'De Jueves a Domingo' }
+        ]
+    },
+    cafe: {
+        title: 'CAFÉ',
+        color: '#6d4c41',
+        items: [
+            { name: 'Americano', price: 45 },
+            { name: 'Capuchino', price: 65 },
+            { name: 'Latte', price: 115 },
+            { name: 'Capuchino c/Baileys', price: 75 },
+            { name: 'Capuchino c/Rompope', price: 110 },
+            { name: 'Capuchino c/Amaretto', price: 60 },
+            { name: 'Espresso', price: 30 },
+            { name: 'Frappé', price: 70 },
+            { name: 'Té (Varios Sabores)', price: 0 }
+        ]
+    },
+    bebidas: {
+        title: 'BEBIDAS',
+        color: 'var(--turquoise-color)',
+        items: [
+            { name: 'Limonada', price: 50 },
+            { name: 'Naranjada', price: 55 },
+            { name: 'Limón c/Menta', price: 60 },
+            { name: 'Refresco', price: 45 },
+            { name: 'Yoli', price: 50 },
+            { name: 'Refresco Preparado', price: 50 },
+            { name: 'Agua Chica', price: 40 },
+            { name: 'Chilate', price: 80 },
+            { name: 'Jarra de Agua Fresca', price: 115 },
+            { name: 'Jarra de Limonada', price: 135 },
+            { name: 'Jarra de Naranjada', price: 145 },
+            { name: 'Botella con Agua', price: 40 },
+            { name: 'Clamato Natural', price: 45 }
+        ]
+    },
+    cervezas: {
+        title: 'CERVEZAS',
+        color: '#ff9800',
+        items: [
+            { name: 'Corona', price: 55 },
+            { name: 'Victoria', price: 55 },
+            { name: 'Negra Modelo', price: 65 },
+            { name: 'Modelo Especial', price: 65 },
+            { name: 'Corona Cero', price: 55 },
+            { name: 'Michelob', price: 68 },
+            { name: 'Modelo Dorada', price: 70 },
+            { name: 'Stella', price: 70 }
+        ],
+        extras: [
+            { name: 'Michelob', extra: '+$10' },
+            { name: 'Cubana', extra: '+$12' },
+            { name: 'Con Clamato', extra: '+$20' }
+        ]
+    },
+    mezcal: {
+        title: 'MEZCAL',
+        color: 'var(--mexican_pink-color)',
+        description: 'Mezcal Artesanal de Calidad Premium',
+        items: [
+            { name: 'Caballito', price: 90 },
+            { name: 'Botella de Medio Litro', price: 250 },
+            { name: 'Botella de Litro', price: 300 }
+        ]
+    },
+    llevar: {
+        title: '¿PARA LLEVAR?',
+        color: 'var(--green-color)',
+        items: [
+            { name: 'Recipiente Chico', price: 33 },
+            { name: 'Recipiente Mediano', price: 37 },
+            { name: 'Recipiente Grande', price: 42 },
+            { name: 'Recipiente EX Grande', price: 90 },
+            { name: 'Bolsa Chile & Orégano', price: 12 },
+            { name: 'Bolsa de Tostada', price: 150 },
+            { name: 'Bolsa de Sisa', price: 5 },
+            { name: 'Recipiente Desechable', price: 15 }
+        ]
+    }
+};
+
+// Event listeners para las categorías
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryCards = document.querySelectorAll('.menu-category-card');
+    const modal = new bootstrap.Modal(document.getElementById('menuModal'));
+    
+    categoryCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const category = this.dataset.category;
+            const data = menuData[category];
+            
+            if (data) {
+                showCategoryContent(data, category);
+                modal.show();
+            }
+        });
+    });
+});
+
+function showCategoryContent(data, category) {
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const modalHeader = document.getElementById('modalHeader');
+    
+    modalTitle.textContent = data.title;
+    modalHeader.style.background = `linear-gradient(135deg, ${data.color}, ${adjustColor(data.color, -20)})`;
+    
+    let content = '';
+    
+    // Pozoles con tamaños
+    if (category === 'pozoles') {
+        data.items.forEach(item => {
+            content += `
+                <div class="mb-4">
+                    <h4 class="fw-bold mb-3" style="color: ${data.color};">${item.name}</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        ${item.sizes.map(size => `
+                            <div class="size-badge" style="background: ${data.color}; color: white;">
+                                ${size.size} - $${size.price}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        });
+    }
+    // Tacos con doble precio
+    else if (category === 'tacos') {
+        content += `
+            <div class="alert-info-custom mb-4">
+                <div class="row text-center fw-bold">
+                    <div class="col-6"><i class="fas fa-utensils me-2"></i>PIEZA</div>
+                    <div class="col-6"><i class="fas fa-receipt me-2"></i>ORDEN (3)</div>
+                </div>
+            </div>
+        `;
+        data.items.forEach(item => {
+            content += `
+                <div class="menu-item-row" style="border-left-color: ${data.color};">
+                    <span class="menu-item-name">${item.name}</span>
+                    <span class="menu-item-price" style="color: ${data.color};">${item.extra}</span>
+                </div>
+            `;
+        });
+    }
+    // Items normales
+    else {
+        data.items.forEach(item => {
+            content += `
+                <div class="menu-item-row" style="border-left-color: ${data.color};">
+                    <span class="menu-item-name">${item.name}</span>
+                    <span class="menu-item-price" style="color: ${data.color};">${item.price}</span>
+                </div>
+            `;
+        });
+    }
+    
+    modalContent.innerHTML = content;
+}
+
+// Función auxiliar para ajustar colores
+function adjustColor(color, amount) {
+    // Si es una variable CSS, retornamos la misma
+    if (color.includes('var(')) {
+        return color;
+    }
+    // Para colores hexadecimales
+    return color;
+}
+</script>

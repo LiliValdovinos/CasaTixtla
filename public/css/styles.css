@@ -253,10 +253,11 @@ html {
     opacity: 1;
 }
 
-/* Each slide*/
-#slide-1 {
+/* Each slide
+/#slide-1 {
     background-image: url('../images/gallery/pozole_image.jpeg');
 }
+*/
 
 #slide-2 {
     background-image: url('../images/gallery/wall_image.jpg');
@@ -367,16 +368,13 @@ html {
 
 @keyframes slide {
     0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
+    30% { transform: translateX(0); }
 
-    25% { transform: translateX(-100%); }
-    45% { transform: translateX(-100%); }
+    33.33% { transform: translateX(-100%); }
+    63.33% { transform: translateX(-100%); }
 
-    50% { transform: translateX(-200%); }
-    70% { transform: translateX(-200%); }
-
-    75% { transform: translateX(-300%); }
-    95% { transform: translateX(-300%); }
+    66.66% { transform: translateX(-200%); }
+    96.66% { transform: translateX(-200%); }
 
     100% { transform: translateX(0); }
 }
@@ -589,6 +587,13 @@ footer {
     border-top: 2px solid var(--secondary-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
+}
+
+/* Logo del navbar */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 @keyframes spin {
