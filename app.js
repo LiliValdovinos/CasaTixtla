@@ -7,6 +7,7 @@ const indexRoutes = require('./routes/index');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Configurar Handlebars como motor de plantillas
 app.engine('handlebars', exphbs.engine({
@@ -34,10 +35,41 @@ app.use((req, res) => {
     });
 });
 
+// Middleware para manejo de errores generales
+app.use((err, req, res, next) => {
+    console.error('Error:', err.stack);
+    res.status(500).render('404', {
+        title: 'Error del servidor - Casa Tixtla'
+    });
+});
+
 // Iniciar servidor
-app.listen(PORT, () => {
-    console.log(`Servidor de Casa Tixtla corriendo en http://localhost:${PORT}`);
-    console.log(`Archivos estáticos servidos desde: ${path.join(__dirname, 'public')}`);
+const server = app.listen(PORT, () => {
+    console.log(`==========================================`);
+    console.log(`Casa Tixtla - Servidor Iniciado`);
+    console.log(`==========================================`);
+    console.log(`Entorno: ${NODE_ENV}`);
+    console.log(`Puerto: ${PORT}`);
+    console.log(`URL: http://localhost:${PORT}`);
+    console.log(`Archivos estáticos: ${path.join(__dirname, 'public')}`);
+    console.log(`==========================================`);
+});
+
+// Manejo graceful shutdown
+process.on('SIGTERM', () => {
+    console.log('SIGTERM recibido. Cerrando servidor...');
+    server.close(() => {
+        console.log('Servidor cerrado correctamente');
+        process.exit(0);
+    });
+});
+
+process.on('SIGINT', () => {
+    console.log('\nSIGINT recibido. Cerrando servidor...');
+    server.close(() => {
+        console.log('Servidor cerrado correctamente');
+        process.exit(0);
+    });
 });
 
 module.exports = app;
