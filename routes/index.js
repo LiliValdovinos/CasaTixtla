@@ -4,31 +4,31 @@ const router = express.Router();
 // Datos estáticos para el menú example
 const menuData = {
     pozoles: [
-        { name: 'Pozole Verde', price: 125, description: 'Con salsa verde de tomate y cilantro fresco' },
-        { name: 'Pozole Blanco', price: 115, description: 'Clásico pozole sin chile, perfecto para toda la familia' }
+        { name: 'Pozole Verde', price: 130},
+        { name: 'Pozole Blanco', price: 125}
     ],
     antojitos: [
-        { name: 'Tostadas de Tinga', price: 45, description: 'Crujientes tostadas con tinga de pollo desmenuzado' },
-        { name: 'Quesadillas', price: 35, description: 'Quesadillas de queso oaxaca con tortilla artesanal' },
-        { name: 'Flautas', price: 50, description: 'Flautas doradas rellenas de pollo, servidas con crema' }
+        { name: 'Chalupitas', price: 85},
+        { name: 'Tostadas', price: 120},
+        { name: 'Chiles Capones', price: 80}
     ],
     bebidas: [
-        { name: 'Agua de Horchata', price: 25, description: 'Refrescante bebida de arroz con canela' },
-        { name: 'Agua de Jamaica', price: 20, description: 'Agua fresca de flor de jamaica natural' },
-        { name: 'Refrescos', price: 18, description: 'Coca-Cola, Sprite, Fanta y más opciones' }
+        { name: 'Chilate', price: 80},
+        { name: 'Agua Fresca', price: 40},
+        { name: 'Refrescos', price: 45}
     ]
 };
 
 const restaurantInfo = {
     name: 'Pozolería Casa Tixtla',
-    established: 1985,
-    experience: new Date().getFullYear() - 1985,
+    established: 1976,
+    experience: new Date().getFullYear() - 1976,
     customers: '10k+',
     natural: '100%',
     phone: '55 5440 8042',
     whatsapp: '+525547573789',
     address: 'C. Juan E. Hernández y Davalos 36, Algarín, Cuauhtémoc, 06880 Ciudad de México, CDMX',
-    hours: 'Lun - Dom: 10:00 AM - 20:00 PM'
+    hours: 'Lun - Dom: 10:30 AM - 20:00 PM'
 };
 
 // Ruta principal
@@ -46,6 +46,7 @@ router.get('/menu', (req, res) => {
     res.render('menu', {
         title: 'Menú - Pozolería Casa Tixtla',
         menuData,
+        restaurantInfo,
         isMenu: true
     });
 });

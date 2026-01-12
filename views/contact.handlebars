@@ -3,91 +3,114 @@
         <div class="text-center mb-5">
             <h1 class="display-4 fw-bold">Contáctanos</h1>
             <p class="lead">¡Ven a disfrutar del mejor pozole de Guerrero!</p>
+            <p class="text-muted"><em>No contamos con servicio a domicilio</em></p>
         </div>
         
         <div class="row mb-5">
             <div class="col-lg-4 mb-4">
-                <div class="card h-100 text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-map-marker-alt fa-3x text-warning mb-3"></i>
-                        <h4>Ubicación</h4>
-                        <p class="mb-3">{{restaurantInfo.address}}</p>
-                        <a href="https://maps.google.com/?q={{restaurantInfo.address}}" class="btn btn-outline-primary" target="_blank">
-                            <i class="fas fa-directions me-2"></i>Cómo llegar
-                        </a>
+                <div class="contact-item text-center">
+                    <div class="contact-icon-wrapper contact-icon-location mx-auto mb-3">
+                        <i class="fas fa-map-marker-alt fa-3x"></i>
                     </div>
+                    <h4 class="contact-title-location">Ubicación</h4>
+                    <p class="mb-3">{{restaurantInfo.address}}</p>
+                    <a href="https://maps.google.com/?q={{restaurantInfo.address}}" class="btn btn-contact-location" target="_blank">
+                        <i class="fas fa-directions me-2"></i>Cómo llegar
+                    </a>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
-                <div class="card h-100 text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-phone fa-3x text-warning mb-3"></i>
-                        <h4>Teléfono</h4>
-                        <p class="mb-3">{{restaurantInfo.phone}}</p>
-                        <a href="tel:{{restaurantInfo.phone}}" class="btn btn-outline-primary">
-                            <i class="fas fa-phone me-2"></i>Llamar Ahora
-                        </a>
+                <div class="contact-item text-center">
+                    <div class="contact-icon-wrapper contact-icon-phone mx-auto mb-3">
+                        <i class="fas fa-phone fa-3x"></i>
                     </div>
+                    <h4 class="contact-title-phone">Teléfono</h4>
+                    <p class="mb-3">{{restaurantInfo.phone}}</p>
+                    <a href="tel:{{restaurantInfo.phone}}" class="btn btn-contact-phone">
+                        <i class="fas fa-phone me-2"></i>Llamar Ahora
+                    </a>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
-                <div class="card h-100 text-center border-0 shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-clock fa-3x text-warning mb-3"></i>
-                        <h4>Horarios</h4>
-                        <p class="mb-3">{{restaurantInfo.hours}}</p>
-                        <a href="https://wa.me/{{restaurantInfo.whatsapp}}" class="btn btn-outline-success" target="_blank">
-                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                        </a>
+                <div class="contact-item text-center">
+                    <div class="contact-icon-wrapper contact-icon-hours mx-auto mb-3">
+                        <i class="fas fa-clock fa-3x"></i>
                     </div>
+                    <h4 class="contact-title-hours">Horarios</h4>
+                    <p class="mb-3">{{restaurantInfo.hours}}</p>
+                    <a href="https://wa.me/{{restaurantInfo.whatsapp}}" class="btn btn-contact-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h3 class="mb-0">Envíanos un Mensaje</h3>
+        <!-- Sección de Facturación -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="invoice-section">
+                    <div class="invoice-header text-center mb-4">
+                        <i class="fas fa-file-invoice fa-3x mb-3"></i>
+                        <h2 class="fw-bold">Guía de Facturación</h2>
+                        <p class="lead">Solicita tu factura de manera fácil y rápida</p>
                     </div>
-                    <div class="card-body">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="nombre" class="form-label">Nombre completo *</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="telefono" class="form-label">Teléfono *</label>
-                                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
-                                </div>
+
+                    <div class="invoice-email-box text-center mb-4">
+                        <i class="fas fa-envelope fa-2x mb-3"></i>
+                        <h4>Envía tu solicitud a:</h4>
+                        <a href="mailto:facturacion@casatixtla.com" class="invoice-email">
+                            facturacion@casatixtla.com
+                        </a>
+                    </div>
+
+                    <div class="invoice-steps">
+                        <h4 class="text-center mb-4">Pasos para solicitar tu factura:</h4>
+                        
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Comprobante de Pago</h5>
+                                <p>Adjunta tu ticket o comprobante de compra en formato PDF o imagen (JPG, PNG).</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Método de Pago</h5>
+                                <p>Indica el método de pago utilizado (efectivo, tarjeta de débito, tarjeta de crédito).</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="asunto" class="form-label">Asunto *</label>
-                                <select class="form-select" id="asunto" name="asunto" required>
-                                    <option value="">Selecciona un asunto...</option>
-                                    <option value="reservacion">Reservación</option>
-                                    <option value="pedido">Hacer un pedido</option>
-                                    <option value="evento">Evento especial</option>
-                                    <option value="sugerencia">Sugerencia</option>
-                                    <option value="otro">Otro</option>
-                                </select>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Constancia de Situación Fiscal</h5>
+                                <p>Adjunta tu constancia de situación fiscal actualizada (puedes descargarla desde el portal del SAT).</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje *</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Uso de CFDI</h5>
+                                <p>Indica el uso de CFDI que requieres.</p>
                             </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
-                                </button>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h5>Correo Electrónico</h5>
+                                <p>Proporciona el correo electrónico donde deseas recibir tu factura en formato PDF.</p>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+
+                    <div class="invoice-note mt-4">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Nota importante:</strong> Las facturas deben solicitarse dentro del mes en que se realizó la compra. 
+                        El tiempo de respuesta es de 24 a 48 horas hábiles.
                     </div>
                 </div>
             </div>
@@ -111,25 +134,243 @@
     </div>
 </section>
 
-<script>
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    if (PozoleriaApp.validateForm(this)) {
-        const formData = new FormData(this);
-        const message = `Hola! Mi nombre es ${formData.get('nombre')}. 
-        
-Asunto: ${formData.get('asunto')}
-Teléfono: ${formData.get('telefono')}
-${formData.get('email') ? 'Email: ' + formData.get('email') : ''}
+<style>
+/* Contact Items */
+.contact-item {
+    padding: 2rem 1rem;
+}
 
-Mensaje: ${formData.get('mensaje')}`;
-        
-        PozoleriaApp.sendWhatsAppMessage(message);
-        PozoleriaApp.Utils.showNotification('Redirigiendo a WhatsApp...', 'success');
-    } else {
-        PozoleriaApp.Utils.showNotification('Por favor completa todos los campos requeridos.', 'warning');
+.contact-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ubicación - Turquesa (igual que botón "Cómo llegar") */
+.contact-icon-location i {
+    color: var(--turquoise-color);
+}
+
+.contact-title-location {
+    color: var(--turquoise-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Teléfono - Verde (igual que botón "Llamar Ahora") */
+.contact-icon-phone i {
+    color: var(--green-color);
+}
+
+.contact-title-phone {
+    color: var(--green-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Horarios - Rosa Mexicano (igual que botón "WhatsApp") */
+.contact-icon-hours i {
+    color: var(--mexican_pink-color);
+}
+
+.contact-title-hours {
+    color: var(--mexican_pink-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Botones de contacto */
+.btn-contact-location {
+    background: var(--turquoise-color);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-contact-location:hover {
+    background: #018a8f;
+    color: white;
+}
+
+.btn-contact-phone {
+    background: var(--green-color);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-contact-phone:hover {
+    background: #3ab02c;
+    color: white;
+}
+
+.btn-contact-whatsapp {
+    background: var(--mexican_pink-color);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-contact-whatsapp:hover {
+    background: #8a024d;
+    color: white;
+}
+
+/* Invoice Section */
+.invoice-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--purple-color);
+}
+
+.invoice-header i {
+    color: var(--purple-color);
+}
+
+.invoice-header h2 {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.invoice-header p {
+    color: #666;
+}
+
+.invoice-email-box {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--turquoise-color);
+}
+
+.invoice-email-box i {
+    color: var(--turquoise-color);
+}
+
+.invoice-email-box h4 {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.invoice-email {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--turquoise-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.invoice-email:hover {
+    color: var(--purple-color);
+}
+
+.invoice-steps {
+    margin-top: 2.5rem;
+}
+
+.invoice-steps h4 {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    border-left-color: var(--turquoise-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--dark-color);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.step-content h5 {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.invoice-note {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--purple-color);
+    color: #666;
+}
+
+.invoice-note i {
+    color: var(--purple-color);
+}
+
+.invoice-note strong {
+    color: var(--dark-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .invoice-section {
+        padding: 2rem 1.5rem;
     }
-});
-</script>
+    
+    .invoice-email {
+        font-size: 1.1rem;
+        word-break: break-all;
+    }
+    
+    .step-item {
+        flex-direction: column;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+</style>

@@ -20,30 +20,30 @@
                 </p>
             </div>
             <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cocina tradicional" class="img-fluid rounded shadow">
+                <img src="/images/gallery/historia_photo.jpg" alt="Pozole" class="img-fluid">
             </div>
         </div>
 
         <!-- Stats Section -->
-        <div class="row text-center mb-5 py-5 bg-light rounded">
+        <div class="row text-center mb-5 py-5 stats-section rounded">
             <div class="col-md-3 mb-4">
-                <div class="display-4 text-warning fw-bold">{{restaurantInfo.experience}}+</div>
-                <h5>Años de Tradición</h5>
+                <div class="stat-number stat-turquoise">{{restaurantInfo.experience}}+</div>
+                <h5 class="stat-title">Años de Tradición</h5>
                 <p class="text-muted">Manteniendo vivas las recetas familiares</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="display-4 text-warning fw-bold">{{restaurantInfo.customers}}</div>
-                <h5>Clientes Satisfechos</h5>
+                <div class="stat-number stat-green">{{restaurantInfo.customers}}</div>
+                <h5 class="stat-title">Clientes Satisfechos</h5>
                 <p class="text-muted">Familias que confían en nuestro sabor</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="display-4 text-warning fw-bold">{{restaurantInfo.natural}}</div>
-                <h5>Ingredientes Naturales</h5>
+                <div class="stat-number stat-purple">{{restaurantInfo.natural}}</div>
+                <h5 class="stat-title">Ingredientes Naturales</h5>
                 <p class="text-muted">Sin conservadores ni químicos artificiales</p>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="display-4 text-warning fw-bold">3</div>
-                <h5>Generaciones</h5>
+                <div class="stat-number stat-pink">3</div>
+                <h5 class="stat-title">Generaciones</h5>
                 <p class="text-muted">De conocimiento culinario tradicional</p>
             </div>
         </div>
@@ -54,22 +54,28 @@
                 <h2 class="text-center mb-5">Nuestros Valores</h2>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                <div class="text-center value-card value-card-tradition">
+                    <div class="value-icon-wrapper mb-3">
+                        <i class="fas fa-heart fa-3x"></i>
+                    </div>
                     <h4>Tradición</h4>
                     <p>Preservamos las recetas auténticas transmitidas de generación en generación.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                <div class="text-center value-card value-card-quality">
+                    <div class="value-icon-wrapper mb-3">
+                        <i class="fas fa-leaf fa-3x"></i>
+                    </div>
                     <h4>Calidad</h4>
                     <p>Seleccionamos los mejores ingredientes frescos y naturales para cada platillo.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-users fa-3x text-warning mb-3"></i>
+                <div class="text-center value-card value-card-family">
+                    <div class="value-icon-wrapper mb-3">
+                        <i class="fas fa-users fa-3x"></i>
+                    </div>
                     <h4>Familia</h4>
                     <p>Tratamos a cada cliente como parte de nuestra familia mexicana.</p>
                 </div>
@@ -77,3 +83,142 @@
         </div>
     </div>
 </section>
+
+<style>
+/* Stats Section */
+.stats-section {
+    background: white;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.stat-turquoise {
+    color: var(--turquoise-color);
+}
+
+.stat-green {
+    color: var(--green-color);
+}
+
+.stat-purple {
+    color: var(--purple-color);
+}
+
+.stat-pink {
+    color: var(--mexican_pink-color);
+}
+
+.stat-title {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* Values Section */
+.value-card {
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Tradición - Rosa Mexicano */
+.value-card-tradition .value-icon-wrapper {
+    background: rgba(160, 3, 89, 0.15);
+}
+
+.value-card-tradition .value-icon-wrapper i {
+    color: var(--mexican_pink-color);
+}
+
+.value-card-tradition:hover .value-icon-wrapper {
+    background: var(--mexican_pink-color);
+    transform: scale(1.1);
+}
+
+.value-card-tradition:hover .value-icon-wrapper i {
+    color: white;
+}
+
+.value-card-tradition h4 {
+    color: var(--mexican_pink-color);
+}
+
+/* Calidad - Verde */
+.value-card-quality .value-icon-wrapper {
+    background: rgba(68, 201, 52, 0.15);
+}
+
+.value-card-quality .value-icon-wrapper i {
+    color: var(--green-color);
+}
+
+.value-card-quality:hover .value-icon-wrapper {
+    background: var(--green-color);
+    transform: scale(1.1);
+}
+
+.value-card-quality:hover .value-icon-wrapper i {
+    color: white;
+}
+
+.value-card-quality h4 {
+    color: var(--green-color);
+}
+
+/* Familia - Turquesa */
+.value-card-family .value-icon-wrapper {
+    background: rgba(1, 160, 165, 0.15);
+}
+
+.value-card-family .value-icon-wrapper i {
+    color: var(--turquoise-color);
+}
+
+.value-card-family:hover .value-icon-wrapper {
+    background: var(--turquoise-color);
+    transform: scale(1.1);
+}
+
+.value-card-family:hover .value-icon-wrapper i {
+    color: white;
+}
+
+.value-card-family h4 {
+    color: var(--turquoise-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .value-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .value-icon-wrapper i {
+        font-size: 2rem !important;
+    }
+}
+</style>
