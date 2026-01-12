@@ -28,7 +28,7 @@ const restaurantInfo = {
     phone: '55 5440 8042',
     whatsapp: '+525547573789',
     address: 'C. Juan E. Hernández y Davalos 36, Algarín, Cuauhtémoc, 06880 Ciudad de México, CDMX',
-    hours: 'Lun - Dom: 10:00 AM - 20:00 PM'
+    hours: 'Lun - Dom: 10:30 AM - 20:00 PM'
 };
 
 // Ruta principal

@@ -363,14 +363,14 @@ const menuData = {
         title: 'ENTRADAS',
         color: 'var(--purple-color)',
         items: [
-            { name: 'Chalupitas (3pzs) de Guerrero', price: 85 },
-            { name: 'Tostadas (3pzs) de Tinga, Pata o Pollo', price: 120 },
-            { name: 'Chiles (3pzs) Capones', price: 80 },
-            { name: 'Chiles (3pzs) Capones c/Chorizo', price: 110 },
-            { name: 'Chiles (3pzs) Capones Mixtos', price: 100 },
-            { name: 'Tacos (3pzs) Dorados de Requesón', price: 85 },
-            { name: 'Tacos (3pzs) Dorados de Pollo', price: 85 },
-            { name: 'Tacos (3pzs) Dorados de Chorizo', price: 90 },
+            { name: 'Chalupitas de Guerrero (3pzs)', price: 85 },
+            { name: 'Tostadas de Tinga, Pata o Pollo (3pzs)', price: 120 },
+            { name: 'Chiles Capones (3pzs)', price: 75 },
+            { name: 'Chiles Capones c/Chorizo (3pzs)', price: 110 },
+            { name: 'Chiles Capones Mixtos (3pzs)', price: 100 },
+            { name: 'Tacos Dorados de Requesón (3pzs)', price: 85 },
+            { name: 'Tacos Dorados de Pollo (3pzs)', price: 85 },
+            { name: 'Tacos Dorados de Chorizo (3pzs)', price: 90 },
             { name: 'Caldo Tlalpeño', price: 90 },
             { name: 'Consomé de Pollo', price: 85 },
             { name: 'Manitas a la Vinagreta', price: 130 }
@@ -388,9 +388,9 @@ const menuData = {
             { name: 'Alambre de Pollo', price: 180 },
             { name: 'Queso Fundido', price: 120 },
             { name: 'Choriqueso', price: 140 },
-            { name: 'Sopes', price: 65 },
-            { name: 'Sopes c/Chorizo', price: 75 },
-            { name: 'Sopes c/Pollo', price: 75 }
+            { name: 'Sopes (3pzs)', price: 65 },
+            { name: 'Sopes c/Chorizo (3pzs)', price: 75 },
+            { name: 'Sopes c/Pollo (3pzs)', price: 75 }
         ]
     },
     tacos: {
@@ -417,7 +417,9 @@ const menuData = {
             { name: 'Nuggets de Pollo (5)', price: 100 },
             { name: 'Consomé de Pollo', price: 100 },
             { name: 'Quesadillas de Harina (3)', price: 100 },
-            { name: 'Sopes c/Crema y Queso (3)', price: 100 }
+            { name: 'Sopes c/Crema y Queso (3)', price: 100 },
+            { name: 'Papas a la francesa', price: 44 },
+            { name: 'Boing infantil', price: 20 }
         ]
     },
     postres: {
@@ -427,26 +429,29 @@ const menuData = {
             { name: 'Jericalla', price: 65 },
             { name: 'Pan de Elote', price: 95 },
             { name: 'Pastel Individual', price: 65 },
-            { name: 'Pay de Limón', price: 80 }
-        ],
-        special: [
-            { name: 'Fresas c/Crema', price: 80, note: 'De Jueves a Domingo' },
-            { name: 'Duraznos c/Crema', price: 80, note: 'De Jueves a Domingo' }
+            { name: 'Pay de Limón', price: 80 },
+            { name: 'Gelatina con Rompope', price: 55 },
+            { name: 'Gelatina', price: 25 },
+            { name: 'Fresas con Crema', price: 80 },
+            { name: 'Duraznos con Rompope', price: 100 },
+            { name: 'Duraznos con Crema', price: 80 }
         ]
     },
     cafe: {
         title: 'CAFÉ',
         color: '#6d4c41',
         items: [
+            { name: 'Agua para Café', price: 15 },
+            { name: 'Café de Olla', price: 30 },
             { name: 'Americano', price: 45 },
             { name: 'Capuchino', price: 65 },
             { name: 'Latte', price: 115 },
-            { name: 'Capuchino c/Baileys', price: 75 },
-            { name: 'Capuchino c/Rompope', price: 110 },
-            { name: 'Capuchino c/Amaretto', price: 60 },
-            { name: 'Espresso', price: 30 },
-            { name: 'Frappé', price: 70 },
-            { name: 'Té (Varios Sabores)', price: 0 }
+            { name: 'Capuchino c/Baileys', price: 115 },
+            { name: 'Capuchino c/Rompope', price: 75 },
+            { name: 'Capuchino c/Amaretto', price: 110 },
+            { name: 'Capuchino c/Cajeta', price: 70 },
+            { name: 'Espresso', price: 60 },
+            { name: 'Té (Varios Sabores)', price: 30 }
         ]
     },
     bebidas: {
@@ -459,11 +464,11 @@ const menuData = {
             { name: 'Refresco', price: 45 },
             { name: 'Yoli', price: 50 },
             { name: 'Refresco Preparado', price: 50 },
-            { name: 'Agua Chica', price: 40 },
+            { name: 'Agua Fresca', price: 40 },
             { name: 'Chilate', price: 80 },
             { name: 'Jarra de Agua Fresca', price: 115 },
             { name: 'Jarra de Limonada', price: 135 },
-            { name: 'Jarra de Naranjada', price: 145 },
+            { name: 'Jarra de Naranjada', price: 135 },
             { name: 'Botella con Agua', price: 40 },
             { name: 'Clamato Natural', price: 45 }
         ]
@@ -492,9 +497,9 @@ const menuData = {
         color: 'var(--mexican_pink-color)',
         description: 'Mezcal Artesanal de Calidad Premium',
         items: [
-            { name: 'Caballito', price: 90 },
-            { name: 'Botella de Medio Litro', price: 250 },
-            { name: 'Botella de Litro', price: 300 }
+            { name: 'Caballito', price: 95 },
+            { name: 'Botella de Medio Litro', price: 425 },
+            { name: 'Botella de Litro', price: 850 }
         ]
     },
     llevar: {
@@ -572,7 +577,10 @@ function showCategoryContent(data, category) {
             content += `
                 <div class="menu-item-row" style="border-left-color: ${data.color};">
                     <span class="menu-item-name">${item.name}</span>
-                    <span class="menu-item-price" style="color: ${data.color};">${item.extra}</span>
+                    <div class="d-flex gap-3 ms-auto">
+                        <span class="menu-item-price" style="color: ${data.color};">$${item.priceUnit}</span>
+                        <span class="menu-item-price" style="color: ${data.color};">$${item.priceOrder}</span>
+                    </div>
                 </div>
             `;
         });
@@ -583,7 +591,7 @@ function showCategoryContent(data, category) {
             content += `
                 <div class="menu-item-row" style="border-left-color: ${data.color};">
                     <span class="menu-item-name">${item.name}</span>
-                    <span class="menu-item-price" style="color: ${data.color};">${item.price}</span>
+                    <span class="menu-item-price" style="color: ${data.color};">$${item.price}</span>
                 </div>
             `;
         });
